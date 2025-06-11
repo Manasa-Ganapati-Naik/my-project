@@ -25,4 +25,4 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 plt.savefig("case_type_distribution.png")
-plt.show()
+plt.close
