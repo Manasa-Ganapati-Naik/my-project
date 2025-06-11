@@ -14,15 +14,22 @@ df["Case_Type_Encoded"] = LabelEncoder().fit_transform(df["Case_Type"])
 # Check for class balance
 import matplotlib.pyplot as plt
 
-# Plot the class distribution
-df["Case_Type"].value_counts().plot(kind="bar")
+# Plot case type distribution
+df["Case_Type"].value_counts().plot(kind="bar", color="skyblue")
 
-# Improve readability
+# Add labels and title
 plt.title("Distribution of Case Types")
 plt.xlabel("Case Type")
 plt.ylabel("Count")
 plt.xticks(rotation=45)
 plt.tight_layout()
-plt.show()
+
+# Save the figure before closing
 plt.savefig("case_type_distribution.png")
-plt.close
+
+# OPTIONAL: Show plot (for notebooks or debugging)
+# plt.show()
+
+# Close the plot to free memory
+plt.close()
+
