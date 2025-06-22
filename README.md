@@ -1,5 +1,8 @@
 # Machine Learning
 
+## Title
+Automatic Drafting of Legal Filings Based on Case Metadata
+
 ## Problem Statement
 Design and build an AI-powered system that can automatically generate draft legal filings — such as motions, petitions, complaints, or affidavits — using structured case metadata.
 
@@ -46,7 +49,7 @@ Design and build an AI-powered system that can automatically generate draft lega
     - Added dropout to reduce overfitting and after the embedding
     - Increase RNN units from 64 to 128 — more capacity.
     - Increase batch size
-- LSTM (Long Short-Term Memory)
+  - LSTM (Long Short-Term Memory)
     - Embedding(128) and LSTM(128) layers for better representation.
     - Dropout(0.3) added to reduce overfitting.
     - EarlyStopping to avoid training too long.
@@ -58,7 +61,7 @@ Design and build an AI-powered system that can automatically generate draft lega
 |---------------------|------------------|-------------------|
 | Logistic Regression | TF-IDF + Linear  | 72%               |
 | Random Forest       | TF-IDF + Tree    | 72%               |
-| Simple RNN          | DL Sequential    | 67%               |
+| Simple RNN          | DL Sequential    | 61%               |
 | LSTM                | DL Sequential    | 67%               |
 
 
