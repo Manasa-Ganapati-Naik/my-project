@@ -13,7 +13,7 @@ Design and build an AI-powered system that can automatically generate draft lega
   - File: `cleaned_legal_metadata.csv`
   - Cleaned by removing missing/invalid records, normalizing text fields, and deriving the target variable (`case_type`)
  
- 
+
 ### Features:
 - Logistic Regression with TF-IDF
 - Random Forest Classifier
@@ -29,6 +29,35 @@ Design and build an AI-powered system that can automatically generate draft lega
 |---------------------|------------------|-------------------|
 | Logistic Regression | TF-IDF + Linear  | 67%               |
 | Random Forest       | TF-IDF + Tree    | 78%               |
+| Simple RNN          | DL Sequential    | 67%               |
+| LSTM                | DL Sequential    | 67%               |
+
+
+### Fine Tuning
+- Logistic Regression with TF-IDF
+  - GridSearchCV for hyperparameter tuning
+  - multiple C values and solvers (liblinear, lbfgs)
+- Random Forest Classifier
+  - RandomizedSearchCV, which is faster and ideal when trying multiple parameters.
+  - Cross-validation (cv=5) and F1 macro for balanced evaluation
+- Deep Learning with:
+  - Simple RNN
+    - Increase embedding dimension from 64 to 128 
+    - Added dropout to reduce overfitting and after the embedding
+    - Increase RNN units from 64 to 128 — more capacity.
+    - Increase batch size
+- LSTM (Long Short-Term Memory)
+    - Embedding(128) and LSTM(128) layers for better representation.
+    - Dropout(0.3) added to reduce overfitting.
+    - EarlyStopping to avoid training too long.
+    - Increased max_words, max_len, and batch_size for better performance.
+
+
+### Model Overview:(After Tuning)
+| Model               | Technique        | Accuracy (Sample) |
+|---------------------|------------------|-------------------|
+| Logistic Regression | TF-IDF + Linear  | 72%               |
+| Random Forest       | TF-IDF + Tree    | 72%               |
 | Simple RNN          | DL Sequential    | 67%               |
 | LSTM                | DL Sequential    | 67%               |
 
