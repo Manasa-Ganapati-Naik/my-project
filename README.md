@@ -40,6 +40,7 @@ Design and build an AI-powered system that can automatically generate draft lega
 - Logistic Regression with TF-IDF
   - GridSearchCV for hyperparameter tuning
   - multiple C values and solvers (liblinear, lbfgs)
+  - macro-averaged F1-score to evaluate performance across multiple classes equally.
 - Random Forest Classifier
   - RandomizedSearchCV, which is faster and ideal when trying multiple parameters.
   - Cross-validation (cv=5) and F1 macro for balanced evaluation
