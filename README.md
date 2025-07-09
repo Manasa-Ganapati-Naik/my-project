@@ -8,12 +8,12 @@ Design and build an AI-powered system that can automatically generate draft lega
 
 ## Dataset Description
 - Original Dataset:
-  - File: `C:\Users\manas\Downloads\convertcsv.csv`
+  - File: https://github.com/Manasa-Ganapati-Naik/my-project/blob/main/convertcsv.csv
   - Source: https://case.law/caselaw/?reporter=f-supp-3d&volume=392
   - Contains metadata like `name`, `docket_number`, and other case details
 
 - Cleaned Dataset (used for training):
-  - File: `cleaned_legal_metadata.csv`
+  - File: https://github.com/Manasa-Ganapati-Naik/my-project/blob/main/cleaned_legal_metadata.csv
   - Cleaned by removing missing/invalid records, normalizing text fields, and deriving the target variable (`case_type`)
  
 
@@ -64,6 +64,9 @@ Design and build an AI-powered system that can automatically generate draft lega
 | Random Forest       | TF-IDF + Tree    | 72%               |
 | Simple RNN          | DL Sequential    | 61%               |
 | LSTM                | DL Sequential    | 67%               |
+
+### Git-hub Link
+https://github.com/Manasa-Ganapati-Naik/my-project.git
 
 
 
